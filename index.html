@@ -70,10 +70,9 @@
             prediction[i].probability.toFixed(2);
           labelContainer.childNodes[i].innerHTML = classPrediction;
 
-          if (prediction[1].probability.toFixed(2) < 0.5) {
+          if (prediction[0].probability.toFixed(2) > 0.5) {
             console.log("Catched over 0.5");
             audio.pause();
-            console.log("pause");
           } else {
             console.log("play");
             audio.play();
